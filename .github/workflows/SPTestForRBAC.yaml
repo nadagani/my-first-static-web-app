@@ -6,7 +6,7 @@ on:
 
 permissions:
       id-token: write
-      #contents: read
+      contents: read
 jobs:
   Test-SevicePrincipal:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
 
 
 
-     - name: Run
+      - name: Run
         if: ${{ true }}
         run: |
           ClientId=$(az ad app create --display-name AditiRBAC --query appId --output tsv)
